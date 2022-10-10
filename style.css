@@ -16,9 +16,13 @@ nav{
     display:flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 45px;
+    padding-top: 28px;
     padding-left: 8%;
     padding-right: 8%;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding-bottom: 16px;
 }
 .logo{
     color: white;
@@ -282,4 +286,3 @@ footer p:nth-child(2){
     cursor: pointer;
 }
 
-}
