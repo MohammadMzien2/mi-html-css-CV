@@ -1,56 +1,273 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
 }
-.hero{
-    height: 100vh;
-    width: 100%;
-    background-image: url(../img/mohammad.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-nav{
-    display:flex;
+
+body {
+    background: black;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    justify-content: space-between;
-    padding-top: 28px;
-    padding-left: 8%;
-    padding-right: 8%;
-    position: fixed;
-    width: 100%;
-    z-index: 999;
-    padding-bottom: 16px;
+    min-height: 100vh;
 }
-.logo{
-    color: white;
-    font-size: 35px;
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 1100px;
+    margin: 10px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+.container .left_side {
+    position: relative;
+    background: rgb(184, 121, 43);
+    padding: 40px;
+}
+
+.profileText {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba (255, 255, 255, 0.2);
+}
+
+.profileText .imgBx {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profileText .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileText h2 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.4em;
+    text-decoration: underline dotted rgb(11, 10, 9);
+
+}
+
+.profileText h2 span {
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.contactInfo {
+    padding-top: 40px;
+}
+
+.title {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
     letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-decoration: underline dotted rgb(41, 18, 0);
+
+}
+
+.contactInfo a {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    border-radius: 30%;
+    margin: 0px 7px;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.contactInfo a:hover {
+    transform: scale(1.3);
+    transition: .3s;
+}
+
+.contactInfo ul {
+    position: relative;
+    line-height: 26px;
+}
+
+.contactInfo ul li {
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
     cursor: pointer;
 }
 
-
-span{
-    color: rgb(3, 57, 100);
-}
-nav ul li{
-    list-style-type: none;
+.contactInfo ul li .icon {
     display: inline-block;
-    padding: 10px 25px;
+    width: 30px;
+    font-size: 25px;
+    color: #16aaeea3;
 }
-nav ul li a{
-    color:white;
-    text-decoration: underline dotted rgba(191 146 91);
-font-weight:bold;
-text-transform: capitalize;
+
+.contactInfo ul li span {
+    color: #fff;
+    font-weight: 900;
+    font-size: 15px;
 }
-nav ul li a:hover{
-    color: rgba(191 146 91);
-    transition: 0.8s;
+
+.contactInfo .education li {
+    margin-bottom: 15px;
 }
-.btn{
+
+.contactInfo .education h5 {
+    color: #03a9f4;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.contactInfo .education h4:nth-child(2) {
+    color: #fff;
+    font-weight: 500;
+}
+
+.contactInfo .education h4 {
+    color: #fff;
+    font-weight: 300;
+}
+
+.contactInfo .languag .precent {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+
+.contactInfo .languag .precent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: rgb(163, 160, 156);
+}
+
+.container .right_side {
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.about {
+    margin-bottom: 50px;
+}
+
+.about:last-child {
+    margin-bottom: 0px;
+}
+
+.title2 {
+    text-decoration: underline dotted rgb(184, 121, 0);
+
+    color: rgb(184, 121, 43);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+
+p {
+    color: #333;
+    line-height: 28px;
+}
+
+.about .box {
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
+    line-height: 28px;
+}
+
+.about .box .year_company {
+    min-width: 150px;
+}
+
+.about .box .year_company h5 {
+    text-transform: uppercase;
+    color: #848c90;
+}
+
+.about .box .text h4 {
+    text-transform: uppercase;
+    color: #2a7da2;
+    font-size: 18px;
+}
+
+.skills .box {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    justify-content: center;
+    line-height: 35px;
+}
+
+.skills .box h4 {
+    text-transform: uppercase;
+    color: #848c99;
+    font-weight: 500;
+}
+
+.skills .box .precent {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #f0f0f0;
+}
+
+.skills .box .precent div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+.interest ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.interest ul li {
+    list-style: none;
+    color: #333;
+    font-weight: 500;
+    margin: 10px 0;
+}
+
+.interest ul li .fa {
+    color: #03a9f4;
+    font-size: 18px;
+    width: 20px;
+}
+
+.btn {
     background-color: black;
     color: white;
     text-decoration: none;
@@ -59,226 +276,37 @@ nav ul li a:hover{
     border-radius: 30px;
     transition: transform .4s;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgba(191 146 91);
     transform: scale(1.4);
 }
-.content{
-    position: absolute;
-    top: 50%;
-    left: 8%;
-    transform: translateY(-50%);
-}
-h1{
-    color: white;
-    margin: 20px 0 20px;
-    font-size: 60px;
-}
-h3{ 
-    color: white;
-    font-size: 25px;
-    margin-bottom: 50px;
-}
-h4{
-    color: black;
-    letter-spacing: 2px;
-    font-size: 24px;
+
+@media (max-width :1000px) {
+    .container {
+        margin: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .interest ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-    
-#about{
-    width: 100%;
-    padding: 100px 0px;
-    background-color: #191919;
-}
-#about img{
-    height: auto;
-    width: 400px;
-}
-.about-text{
-width: 550px;
-}
-.main{
-    width: 1130px;
-    max-width: 95%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.about-text h2{
-    color: white;
-    font-size: 75px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
-    text-decoration: underline dotted rgba(191 146 91);
+@media (max-width :600px) {
+    .about .box {
+        flex-direction: column;
+    }
 
-}
-.about-text h5{
-    color: white;
-    letter-spacing: 2px;
-    font-size: 22px;
-    margin-bottom: 25px;
-    text-transform: capitalize;
-}
-.about-text p{
-    color: rgba(191 146 91);
-    letter-spacing: 1px;
-    line-height: 28px;
-    font-size: 18px;
-    margin-bottom: 45px;
-}
-button{
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 13px 30px;
-    border-radius: 30px;
-    transition: .8s;
-    font-size: 20px;
-}
-button:hover{
-    background-color: transparent;
-    border: 2px solid black;
-    cursor: pointer;
-}
-#service{
-    background: #101010;
-    width: 100%;
-    padding: 100px 0px;
-}
-.title h2{
-    color: white;
-    font-size: 75px;
-    width: 1130px;
-    margin: 30px auto;
-    text-align: center;
-    text-decoration: underline dotted rgba(191 146 91);
+    .about .box .year_company {
+        margin-bottom: 5px;
+    }
 
-}
-.box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 550px;
-}
-.card{
-    height: 365px;
-    width: 335px;
-    padding: 20px 35px;
-    background: #191919;
-    border-radius: 20px;
-    margin: 15px;
-    position: relative;
-    overflow:hidden;
-    text-align: center;
-}
-.card i{
-    font-size: 50px;
-    display: block;
-    text-align: center;
-    margin:25px 0px;
-    color:rgba(191 146 91);
-}
-h5{
-    color: white;
-    font-size: 23px;
-    margin-bottom: 15px;
-}
-.pra p{
-    color: rgba(191 146 91);
-    font-size: 16px;
-    line-height: 27px;
-    margin-bottom: 25px;
-}
+    .interest ul {
+        grid-template-columns: repeat(1, 1fr);
+    }
 
-#contact-me{
-    width: 100%;
-    height: 290px;
-    background: #191919;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
+    .skills .box {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
-#contact-me p{
-    color: white;
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 25px;
-    text-decoration: underline dotted rgba(191 146 91);
-
-}
-#contact-me .button-two{
-    background-color: black;
-    color: white;
-    text-decoration: none;
-    border: 2px solid transparent;
-    font-weight: bold;
-    padding: 9px 22px;
-    border-radius: 30px;
-    transition: .8s;
-}
-#contact-me .button-two:hover{
-    background-color: transparent;
-    border: 2px solid black;
-    cursor: pointer;
-}
-footer{
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background: #101010;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-footer p:nth-child(1){
-    font-size: 30px;
-    color: white;
-    margin-bottom: 24px;
-    font-weight: bold;
-    text-decoration: underline dotted rgba(191 146 91);
-}
-footer p:nth-child(2){
-    color: white;
-    font-size: 22px;
-    width: 500px;
-    text-align: center;
-    line-height: 26px;
-}
-.social{
-    display: flex;
-}
-.social a{
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: black;
-    border-radius: 50%;
-    margin: 22px 10px;
-    color: white;
-    text-decoration: none;
-    font-size: 28px;
-}
-.social a:hover{
-    transform: scale(1.3);
-    transition: .3s;
-}
-.end{
-    position: absolute;
-    color:white;
-    bottom:-1px;
-    font-size: 24px;
-    text-decoration: underline dotted rgba(191 146 91);
-    cursor: pointer;
-line-height: 40px;
-}
-
-
-
